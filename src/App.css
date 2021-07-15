@@ -7,6 +7,15 @@
   pointer-events: none;
 }
 
+.desc {
+  margin: 20px 40px;
+  font-size: medium;
+}
+
+#imageView {
+  height: 200px;
+}
+
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
     animation: App-logo-spin infinite 20s linear;
