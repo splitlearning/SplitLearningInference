@@ -1,0 +1,7 @@
+pandas
+torch
+torchvision
+pillow==8.2.0
+tensorboardX
+flask_cors
+flask
