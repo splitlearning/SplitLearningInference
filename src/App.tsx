@@ -17,7 +17,7 @@ interface Props {}
 // the client model will be downloaded and used by ONNX
 const RESNET18_CLIENT_MODEL_URL = 'http://splitlearning.mit.edu/SplitLearningInference/resnet18_client.onnx';
 // the server model will be sent activations through a POST request
-const RESNET18_SERVER_MODEL_URL = 'http://matlaber5.media.mit.edu:5000/inference';
+const RESNET18_SERVER_MODEL_URL = 'http://matlaber10.media.mit.edu:5000/inference';
 
 class App extends Component<Props, State> {
 
