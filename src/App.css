@@ -7,13 +7,35 @@
   pointer-events: none;
 }
 
+h1 {
+  margin-left: 25px;
+  margin-right: 25px;
+}
+
 .desc {
   margin: 20px 40px;
   font-size: medium;
+  max-width: 500px;
 }
 
 #imageView {
   height: 200px;
+}
+
+#splitInferenceDiagram {
+  width: 500px;
+}
+
+@media only screen and (max-width: 600px) {
+  #splitInferenceDiagram {
+    width: 400px;
+  }
+}
+
+@media only screen and (max-width: 475px) {
+  #splitInferenceDiagram {
+    width: 300px;
+  }
 }
 
 @media (prefers-reduced-motion: no-preference) {

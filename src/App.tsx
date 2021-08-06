@@ -5,6 +5,7 @@ import ndarray from "ndarray";
 import ops from 'ndarray-ops';
 import './App.css';
 
+
 interface State {
   loading: string, // Loading/status message displayed to user
   modelLoaded: boolean, // flag to decide whether client model needs to be loaded -- needs to be loaded only during the first inference
@@ -15,9 +16,9 @@ interface State {
 interface Props {}
 
 // the client model will be downloaded and used by ONNX
-const RESNET18_CLIENT_MODEL_URL = 'http://splitlearning.mit.edu/SplitLearningInference/resnet18_client.onnx';
+const RESNET18_CLIENT_MODEL_URL = 'https://splitlearning.mit.edu/SplitLearningInference/resnet18_client.onnx';
 // the server model will be sent activations through a POST request
-const RESNET18_SERVER_MODEL_URL = 'http://matlaber10.media.mit.edu:5000/inference';
+const RESNET18_SERVER_MODEL_URL = 'https://sl-demo-backend.herokuapp.com/inference';
 
 class App extends Component<Props, State> {
 
@@ -154,15 +155,28 @@ class App extends Component<Props, State> {
       <div className="App">
         <header className="App-header">
           <h1>ResNet18 Split Inference Demo</h1>
-          <p className="desc">Your uploaded image is sent through the client model which returns the split activations of a cut layer within the full ResNet18 model. These activations are sent to a server where the remaining of the inference is completed. This allows you to perform inference on a model present on a third party server while preserving your image's privacy.</p>
+          <p className="desc">
+            A pre-trained ResNet18 model is split into <b>two</b> separate models — <b>client</b> (Alice) and <b>server</b> (Bob).
+          </p>
+          <img id="splitInferenceDiagram" src="split_inference_diagram.png"/>
+          <p className="desc">
+            Your <b>uploaded image</b> is sent through the client model which returns the <b>split activations</b> of a cut layer within the full model. 
+            <br />
+            <br />
+            These activations are sent to a server where the remaining of the inference is completed. The <b>output tensor</b> is then sent back to the client. 
+            <br />
+            <br />
+            This allows you to perform <b>inference</b> on a model present on a <b>third party</b> server while <b>preserving your image's privacy</b>.
+          </p>
           { (this.state.loading === null) ? (
             <div>
               <input onChange={this.updatePreview} type="file" id="inputImage" accept="image/jpeg" />
               <br />
-              <input type="submit" onClick={this.classifyImage} value="Classify Image" id="submit" />
+              <br />
               <div id="imageLoader" className="loader"></div>
               { this.state.class ? <p>Class: {this.state.class}</p> : <span><br /><br /></span> }
-              <img id="imageView" src={this.state.imageURL}/>
+              <img id="imageView" src={this.state.imageURL} style={{display: (this.state.imageURL === null) ? "none" : "block"}}/>
+              <input type="submit" onClick={this.classifyImage} value="Classify Image" id="submit" />
             </div>
           ) : (
             <p>{this.state.loading}</p>
