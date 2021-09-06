@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/SplitLearningInference/static/css/main.2eb8cd13.chunk.css",
-    "main.js": "/SplitLearningInference/static/js/main.4f8fd8c6.chunk.js",
-    "main.js.map": "/SplitLearningInference/static/js/main.4f8fd8c6.chunk.js.map",
+    "main.js": "/SplitLearningInference/static/js/main.a44c91e1.chunk.js",
+    "main.js.map": "/SplitLearningInference/static/js/main.a44c91e1.chunk.js.map",
     "runtime-main.js": "/SplitLearningInference/static/js/runtime-main.2cd15bf3.js",
     "runtime-main.js.map": "/SplitLearningInference/static/js/runtime-main.2cd15bf3.js.map",
     "static/js/2.9eb2acf7.chunk.js": "/SplitLearningInference/static/js/2.9eb2acf7.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.2cd15bf3.js",
     "static/js/2.9eb2acf7.chunk.js",
     "static/css/main.2eb8cd13.chunk.css",
-    "static/js/main.4f8fd8c6.chunk.js"
+    "static/js/main.a44c91e1.chunk.js"
   ]
 }
