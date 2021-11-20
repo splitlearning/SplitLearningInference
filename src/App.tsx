@@ -16,7 +16,7 @@ interface State {
 interface Props {}
 
 // the client model will be downloaded and used by ONNX
-const RESNET18_CLIENT_MODEL_URL = 'https://splitlearning.mit.edu/SplitLearningInference/resnet18_client.onnx';
+const RESNET18_CLIENT_MODEL_URL = 'https://splitlearning.mit.edu/demo/resnet18_client.onnx';
 // the server model will be sent activations through a POST request
 const RESNET18_SERVER_MODEL_URL = 'https://sl-demo-backend.herokuapp.com/inference';
 
