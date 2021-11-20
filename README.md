@@ -20,4 +20,4 @@ Runs app locally (be sure to change the server model URL in `App.tsx` if needed)
 
 ### `npm deploy`
 
-Deploys app to production (https://splitlearning.mit.edu/SplitLearningInference)
+Deploys app to production (https://splitlearning.mit.edu/demo)
